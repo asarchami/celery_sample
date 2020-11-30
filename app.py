@@ -6,4 +6,5 @@ if __name__ == "__main__":
     for num in range(10):
         add.delay(num, num)
     t2 = time.perf_counter()
+    # This will not take into account task execution time
     print(f"Execution time: {t2 - t1:0.4f} seconds")

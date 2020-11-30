@@ -10,6 +10,7 @@ app = Celery("tasks", broker=BROKER_URL)
 def add(x, y):
     sleep(2)
     res = x + y
+    # This will get over written
     with open(
         f'logs/{datetime.strftime(datetime.now(), "%m-%d-%Y_%H:%M:%S")}', "w"
     ) as _file:
